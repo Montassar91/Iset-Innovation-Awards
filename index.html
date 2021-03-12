@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
+
+        <link rel="stylesheet" href="compiled/flipclock.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="compiled/flipclock.js"></script>
+
+        <title>Responsive landing page</title>
+        <link rel = "icon" href =  "assets/img/icon.png" type = "image/x-icon"> 
+    </head>
+    <body>
+
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
+        </a>
+        
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="#" class="nav__logo"><img src="assets/img/logo.png"></a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Accueil</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">À Propos</a></li>
+                        <li class="nav__item"><a href="#calender" class="nav__link">Déroulement</a></li>
+                        <li class="nav__item"><a href="#teams" class="nav__link">les équipes</a></li>
+                        <li class="nav__item"><a href="#sponsors" class="nav__link">Nos Sponsors</a></li>
+
+                        <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <section class="home" id="home">
+                <div class="home__container bd-container bd-grid">
+                    
+                    <div class="home_header"> 
+                        <h1>2IA Isets Innovation Awards Iset Bizerte</h1>
+                        <h1>Make it happen</h1>
+                    </div>
+
+                    <div class="home__img">
+                        <img src="assets/img/home.png" alt="">
+                    </div>
+
+                    <div class="home__data">
+                        <div class="clock" style="margin:2em;"></div>
+                        <div class="message"></div>
+                    
+                        <script type="text/javascript">
+                            var clock;
+                            
+                            $(document).ready(function() {
+                                var clock;
+                    
+                                clock = $('.clock').FlipClock({
+                                    clockFace: 'DailyCounter',
+                                    autoStart: false,
+                                    callbacks: {
+                                        stop: function() {
+                                            $('.message').html('The clock has stopped!')
+                                        }
+                                    }
+                                });
+
+                                var currentDate = new Date().getTime() / 1000;
+                                clock.setTime(1616976000 - currentDate);
+                                clock.setCountdown(true);
+                                clock.start();
+                    
+                            });
+                        </script>
+                    </div>   
+                </div>
+            </section>
+
+            <section class="about section bd-container" id="about">
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/shared.png" alt="">
+                    </div>
+                    <div class="about__data">
+                        <h2 class="section-title-center">Que ce que le Iset Innovation Awards</h2>
+                        <p class="about__description">L’ISETs Innovation Awards (ci-après désignée « 2IA ») est un concours des meilleures initiatives
+                            entrepreneuriales et innovantes organisé par la Direction Générale des Etudes Technologiques (ci-après
+                            désignée l’« Organisateur ») dans le cadre du PAQ-DGSU réseau des ISETs.</p>
+                        <p class="about__description">Le concours « 2IA » vise d’une part, à développer l’esprit entrepreneurial et innovant chez les étudiants
+                            du réseau des Instituts Supérieurs des Etudes Technologiques (ci-après désigné « ISETs ») et les
+                            pousser vers l’intention entrepreneuriale.
+                            D’autre part, le concours « 2IA » permettra de repérer et de soutenir les projets à fort potentiel
+                            d’innovation débouchant à une création d’entreprises </p>
+                    </div>
+                </div>
+                <div style="margin-top: 5rem;">
+                    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                        <div class="gallery-cell gallery-cell1"></div>
+                        <div class="gallery-cell gallery-cell2"></div>
+                        <div class="gallery-cell gallery-cell3"></div>
+                        <div class="gallery-cell gallery-cell4"></div>
+                        <div class="gallery-cell gallery-cell5"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section bd-container" id="calender">
+                <h2 class="section-title">Déroulement du Compétition</h2>
+                <div class="calender_container bd-grid">
+                    <div class="decoration__data">
+                        <ul class="calender_container_list">
+                            <li class="calender_container_list_item">Sensibilisation et Inscription en ligne <span style="display: block;" >12-11-2020 => 10-01-2021</span></li>
+                            <li class="calender_container_list_item">Préselection des candidats <span style="display: block;" >11-01-2021 => 11-01-2021</span></li>
+                            <li class="calender_container_list_item">Coaching des candidats <span style="display: block;" >18-01-2021 => 13-06-2021</span></li>
+                        </ul>
+                    </div>
+                    <div class="decoration__data">
+                        <ul class="calender_container_list">
+                            <li class="calender_container_list_item">Announce des laureats dans chaque Iset<span style="display: block;" >29-03-2021 => 03-04-2021</span></li>
+                            <li class="calender_container_list_item">Présélection des 20 meilleurs projects <span style="display: block;" >06/05/2021 => 10-05-2021</span></li>
+                            <li class="calender_container_list_item">Evaluation finale et remise des prix<span style="display: block;" >12/06/2021 => 13-06-2021</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="teams section bd-container" id="teams">
+                <h2 class="section-title">Les équipes</h2>
+
+                <div class="teams__container bd-grid">
+                    <div class="teams__content">
+                        <img src="assets/img/avatar.png" alt="" class="teams__img">
+                        <h3 class="teams__title">Dream Team</h3>
+                        <span class="button teams__button"></span>
+                    </div>
+                    <div class="teams__content">
+                        <img src="assets/img/avatar.png" alt="" class="teams__img">
+                        <h3 class="teams__title">Aedifica Perderer</h3>
+                        <span class="button teams__button"></span>
+                    </div>
+                    <div class="teams__content">
+                        <img src="assets/img/avatar.png" alt="" class="teams__img">
+                        <h3 class="teams__title">Bermuda</h3>
+                        <span class="button teams__button"></span>
+                    </div>
+                    <div class="teams__content">
+                        <img src="assets/img/avatar.png" alt="" class="teams__img">
+                        <h3 class="teams__title">ASAP</h3>
+                        <span class="button teams__button"></span>
+                    </div>
+                    <div class="teams__content">
+                        <img src="assets/img/avatar.png" alt="" class="teams__img">
+                        <h3 class="teams__title">Hola Project</h3>
+                        <span class="button teams__button"></span>
+                    </div>
+                    <div class="teams__content">
+                        <img src="assets/img/avatar.png" alt="" class="teams__img">
+                        <h3 class="teams__title">Terminators</h3>
+                        <span class="button teams__button"></span>
+                    </div>
+                    <div class="teams__content">
+                        <img src="assets/img/avatar.png" alt="" class="teams__img">
+                        <h3 class="teams__title">Vitality</h3>
+                        <span class="button teams__button"></span>
+                    </div>
+                    <div class="teams__content">
+                        <img src="assets/img/avatar.png" alt="" class="teams__img">
+                        <h3 class="teams__title">PNG</h3>
+                        <span class="button teams__button"></span>
+                    </div>
+                    <div class="teams__content">
+                        <img src="assets/img/avatar.png" alt="" class="teams__img">
+                        <h3 class="teams__title">Evolution</h3>
+                        <span class="button teams__button"></span>
+                    </div>
+                    <div class="teams__content">
+                        <img src="assets/img/avatar.png" alt="" class="teams__img">
+                        <h3 class="teams__title">We Can</h3>
+                        <span class="button teams__button"></span>
+                    </div>
+                    <div class="teams__content">
+                        <img src="assets/img/avatar.png" alt="" class="teams__img">
+                        <h3 class="teams__title">White Hats</h3>
+                        <span class="button teams__button"></span>
+                    </div>
+                    <div class="teams__content">
+                        <img src="assets/img/avatar.png" alt="" class="teams__img">
+                        <h3 class="teams__title">First Step</h3>
+                        <span class="button teams__button"></span>
+                    </div>
+                </div>
+
+                <section class="section bd-container" id="sponsors">
+                    <h2 class="section-title">Nos Sponsors</h2>
+                    <div class="sponsors_container bd-grid">
+                        <div class="decoration__data">
+                            <img src="assets/img/sponsor.png" class="sponsors_img">
+                            <img src="assets/img/sponsor.png" class="sponsors_img">
+                            <img src="assets/img/sponsor.png" class="sponsors_img">
+                            <img src="assets/img/sponsor.png" class="sponsors_img">
+                            <img src="assets/img/sponsor.png" class="sponsors_img">
+                            <img src="assets/img/sponsor.png" class="sponsors_img">
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+            <section class="contact section" id="sponsors">
+                <div class="contact__container bd-container bd-grid">
+                    <div class="contact__content">
+                        <h2 class="contact__title">Contact Us</h2>
+                        <div>
+                            <img src="assets/img/location.png">
+                            <p style="display: inline;">Route Menzel Abderrahmen – Zarzouna 7021 Bizerte، 7021</p>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/GoogleClub.ISETB">
+                                <img src="assets/img/facebook.png">
+                                <p>Club Google Iset Bizerte</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/events/786670575217650?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22search_results%22%2C%22surface%22%3A%22search%22%7D]%7D">
+                                <img src="assets/img/facebook.png">
+                                <p>Page événement 2IA</p>
+                            </a>
+                        </div>
+                        <img src="assets/img/phone-48.png">
+                        <p>22333444 - 22333444</p>
+                    </div>
+
+                    <div class="contact__img">
+                        <img src="assets/img/send.png" alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p class="footer__copy">Club Google Iset Bizerte &#169; 2021</p>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
